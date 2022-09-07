@@ -478,3 +478,22 @@ bool ct_select(arg_t _)
 
 	return dirty;
 }
+
+bool cg_random(arg_t _)
+{
+  int n = fileidx;
+  while (n == fileidx && filecnt >= 2) {
+    n = rand() % filecnt;
+  }
+
+	if (mode == MODE_IMAGE && fileidx != n) {
+		load_image(n);
+		return true;
+	} else if (mode == MODE_THUMB && fileidx != n) {
+		fileidx = n;
+		tns.dirty = true;
+		return true;
+	} else {
+		return false;
+	}
+}
