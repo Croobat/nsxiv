@@ -13,7 +13,7 @@ static const char *DEFAULT_MARK_COLOR = NULL;  /* NULL means it will default to 
 #if HAVE_LIBFONTS
 static const char *DEFAULT_BAR_BG     = NULL;  /* NULL means it will default to window background */
 static const char *DEFAULT_BAR_FG     = NULL;  /* NULL means it will default to window foreground */
-static const char *DEFAULT_FONT       = "JetBrainsMonoMedium Nerd Font Mono-9";
+static const char *DEFAULT_FONT       = "JetBrains Mono Nerd Font:size=9:style=Bold";
 
 /* if true, statusbar appears on top of the window */
 static const bool TOP_STATUSBAR = false;
